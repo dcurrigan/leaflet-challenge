@@ -4,7 +4,7 @@ Week 17 Geo-mapping Homework
 > Created by Dale Currigan  
 > July 2021  
   
-![Leaflet](/Images/Capture2.png)  
+![Leaflet](/Images/Lightmap.png)  
 
 ## Table of contents  
 * [Project Intro](#Project-Intro)  
@@ -64,10 +64,13 @@ leaflet-challenge
 # Design 
 I've created an interactive web visualisation using D3 to explore the US Census Bureau data. <a href="https://data.census.gov/cedsci/">US Census Bureau data</a>. An interactive scatter plot has been generated with the data, allowing the user to investigate the data further by changing axes or the colour scale for the chart (see below).  
   
-![D3](/Images/d3.gif)  
+![Leaflet](/Images/Satellitemap.png)  
   
   
 Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d">here</a> provided the basis for the colour scaling and legend. The data points are coloured based upon the scale generated with scaleQuantize(), which allows scaling of a numerical value in the domain to a string (the colour hex value) in the range.    
+
+![Leaflet](/Images/Heatmap.png)  
+
   
 **Example Code:** Creating a colour scale 
 ```
