@@ -59,27 +59,16 @@ leaflet-challenge
 * Click on any of the coloured markers and a pop-up will appear with further information on that earthquake  
 
 # Design 
-I've created an interactive web visualisation using D3 to explore the US Census Bureau data. <a href="https://data.census.gov/cedsci/">US Census Bureau data</a>. An interactive scatter plot has been generated with the data, allowing the user to investigate the data further by changing axes or the colour scale for the chart (see below).  
+I've created an interactive web visualisation using javascript and leaflet to explore the  <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS</a> Earthquake data. The landing page displays a worldmap with the <a href="https://docs.mapbox.com/api/maps/styles/">Mapbox Light style</a>. Each earthquake in the dataset from the past 7 days is plotted as a circle marker, with colour and size determined by the magnitude of the quake. To emphasize the larger quakes a pulsating animation was added to those with magnitude over 5.0.    
   
 ![Leaflet](/Images/Satellitemap.png)  
   
   
-Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d">here</a> provided the basis for the colour scaling and legend. The data points are coloured based upon the scale generated with scaleQuantize(), which allows scaling of a numerical value in the domain to a string (the colour hex value) in the range.    
+Four map styles are available for the user to switch between. Both the earthquake and plate tectonics layers can additionally be toggled on and off. A heatmap layer was also added using the <a href="https://github.com/Leaflet/Leaflet.heat">leaflet-heat</a> plugin. This highlights the high number of earthquakes in the western north america region (even though they are of low magnitude).   
 
 ![Leaflet](/Images/Heatmap.png)  
 
-  
-**Example Code:** Creating a colour scale 
-```
-  function colour_scaler(data) {
-    return d3.scaleQuantize()
-      .domain([(d3.min(censusData, d => d[data])), (d3.max(censusData, d => d[data]))])  
-      .range(['#E7F1D7', '#D0E7BD', '#B2DDA3', '#8FD28A', '#71C67B', '#59BA76', '#41ae76', '#379A7C', '#2E857E', '#256770', '#1D465B'])
-
-  };
-```
-  
-  
+    
 # Sources
 |No|Source|Link|
 |-|-|-|
