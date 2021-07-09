@@ -16,14 +16,12 @@ Week 17 Geo-mapping Homework
 * [Status](#Status)  
 
 # Project Intro
-This project involved using D3 to create a scatter plot between variable in from the <a href="https://data.census.gov/cedsci/">US Census Bureau</a> 2014 dataset. The briefing for the project was as follows: 
+This project covers the week 17 homework on geomapping and leaflet. Earthquake data from the <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">US Geological Survey (USGS)</a> was to be used to creat a visualisation of recent earthquakes and how they relate to the position of the tectonic plates. The briefing for the project was as follows: 
 
-*Welcome to the newsroom! You've just accepted a data visualization position for a major metro paper. You're tasked with analyzing the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand your findings.*  
+*Welcome to the United States Geological Survey, or USGS for short! The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. As a new hire, you will be helping them out with an exciting new project!*  
   
-*The editor wants to run a series of feature stories about the health risks facing particular demographics. She's counting on you to sniff out the first story idea by sifting through information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System.*  
+*The USGS is interested in building a new set of tools that will allow them visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. Their hope is that being able to visualize their data will allow them to better educate the public and other government organizations (and hopefully secure more funding..) on issues facing our planet.*  
   
-*The data set included with the assignment is based on 2014 ACS 1-year estimates*  
-
   
 # Project Structure  
 ```
@@ -35,21 +33,21 @@ leaflet-challenge
 |
 |__ static/                              
 |   |__css/                             # Directory for css stylesheets
-|   |  |__ d3Style.css                              
 |   |  |__ style.css                              
 |   |
-|   |__data/                            # Directory for the census data
-|   |  |__ data.csv
+|   |__data/                            # Directory for the data files
+|   |  |__ data.geojson                 # Test data file of earthquake data
+|   |  |__ PB2002_boundaries.json       # Tectonic plate geojson
 |   | 
 |   |__js/                              # Directory for javscript code
-|      |__ app.js
-|      |__ eslintrc.json
+|      |__ logic.js                     # Primary javascript code for site
+|      |__ config.js                    # Mapbox API key needs to be inserted here
+|      |__ leaflet-heat.js              # Heatmap plugin for leaflet
 |      
 |__ Images/                             # Directory for image files
-|   |__ d3.gif
-|   |__ capture.png
-|   |__ giphy.gif
-|   |__ newspaper.svg
+|   |__ Heatmap.png
+|   |__ Lightmap.png
+|   |__ Satellitemap.png
 |
 ``` 
   
