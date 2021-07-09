@@ -53,11 +53,10 @@ leaflet-challenge
   
 # Setup 
   
-* The site is can be accessed at: https://dcurrigan.github.io/D3-challenge/
-* The html for the site is all contained in index.html
-* All styles are contained within static/css/D3style.css and style.css
-* The javascript code enabling the functionality of the site is can be found within static/js/app.js
-* The base dataset is found within data.csv   
+* The requires a <a href="https://www.mapbox.com/">Mapbox</a> API key, which should be first entered in the config.js file
+* Once the API key has been inserted the index.html can be opend to view the page
+* Use the controls on the upper right of the screen to change maps, or to enable/disable layers
+* Click on any of the coloured markers and a pop-up will appear with further information on that earthquake  
 
 # Design 
 I've created an interactive web visualisation using D3 to explore the US Census Bureau data. <a href="https://data.census.gov/cedsci/">US Census Bureau data</a>. An interactive scatter plot has been generated with the data, allowing the user to investigate the data further by changing axes or the colour scale for the chart (see below).  
@@ -84,8 +83,9 @@ Example code sourced <a href="https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a
 # Sources
 |No|Source|Link|
 |-|-|-|
-|1|United States Census Beureau            |https://data.census.gov/cedsci/| 
-|2|Dynamic Colour Scale Legend             |https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d|
+|1|USGS GeoJSON Summary Feed            |http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php| 
+|2|Tectonic Plates GeoJson              |https://github.com/fraxen/tectonicplates|
+|3|Leafelt-Heat Plugin                  |https://github.com/Leaflet/Leaflet.heat|
 
    
 # Contributors  
